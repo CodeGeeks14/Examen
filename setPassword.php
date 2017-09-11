@@ -3,12 +3,8 @@
    // var_dump($_POST);
     $result = strcmp($_POST["password"], $_POST["check_password"]);
     if($result == 0) {
-        $servername = "10.3.1.216";
-$username = "offriyk183";
-$password = "5zaqw4by5t73vFwqP";
-$dbname = "offriyk183_SailTrail";
-
-$connection = new mysqli($servername, $username, $password, $dbname);
+       
+	   include('db_connect.php');
 
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
